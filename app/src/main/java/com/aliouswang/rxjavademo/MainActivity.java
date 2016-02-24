@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn_rx_create;
     private Button btn_just;
+    private Button btn_from;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +68,25 @@ public class MainActivity extends AppCompatActivity {
                         log("onNext:" + integer);
                     }
                 }));
+
+        btn_from = (Button) findViewById(R.id.btn_from);
+        Integer [] arrys = {1,2,3};
+        btn_from.setOnClickListener(view -> Observable.from(arrys).subscribe(new Subscriber<Integer>() {
+            @Override
+            public void onCompleted() {
+                log("onCmpleted");
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+
+            }
+
+            @Override
+            public void onNext(Integer integer) {
+                log("onNext:" + integer);
+            }
+        }));
     }
 
     public void log(String logStr) {

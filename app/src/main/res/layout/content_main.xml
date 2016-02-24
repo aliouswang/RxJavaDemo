@@ -16,15 +16,23 @@
     <Button
         android:id="@+id/btn_rx_create"
         android:text="test create"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="40dp" />
 
     <Button
         android:id="@+id/btn_just"
         android:text="test just"
         android:layout_below="@+id/btn_rx_create"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_from"
+        android:text="test from"
+        android:layout_below="@+id/btn_just"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 </RelativeLayout>
