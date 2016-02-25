@@ -13,18 +13,43 @@
     tools:showIn="@layout/activity_main"
     tools:context="com.aliouswang.rxjavademo.MainActivity">
 
-    <Button
-        android:id="@+id/btn_rx_create"
-        android:text="test create"
-        android:layout_marginTop="30dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_rx_create"
+                android:text="test create"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
-    <Button
-        android:id="@+id/btn_just"
-        android:text="test just"
-        android:layout_below="@+id/btn_rx_create"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+            <Button
+                android:id="@+id/btn_just"
+                android:text="test just"
+                android:layout_below="@+id/btn_rx_create"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <Button
+                android:id="@+id/btn_rx_flat_map"
+                android:text="test flat map"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <Button
+                android:id="@+id/btn_map"
+                android:text="test map"
+                android:layout_below="@+id/btn_rx_create"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>
