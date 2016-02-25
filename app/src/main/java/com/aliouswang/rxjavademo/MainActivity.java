@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn_rx_create;
     private Button btn_just;
-    private Button btn_from;
+    private Button btn_rx_flat_map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,24 +69,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }));
 
-        btn_from = (Button) findViewById(R.id.btn_from);
+        btn_rx_flat_map = (Button) findViewById(R.id.btn_rx_flat_map);
         Integer [] arrys = {1,2,3};
-        btn_from.setOnClickListener(view -> Observable.from(arrys).subscribe(new Subscriber<Integer>() {
-            @Override
-            public void onCompleted() {
-                log("onCmpleted");
-            }
-
-            @Override
-            public void onError(Throwable throwable) {
-
-            }
-
-            @Override
-            public void onNext(Integer integer) {
-                log("onNext:" + integer);
-            }
-        }));
+        btn_rx_flat_map.setOnClickListener(
+                view -> Observable.just("Hello map").map(s -> s + "_Dan").subscribe(s -> log(s))
+        );
     }
 
     public void log(String logStr) {
